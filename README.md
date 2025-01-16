@@ -19,7 +19,7 @@ Import NgFlyoutModule into your app module and add it to your module imports arr
 Into root component class (app.component.ts) inject `NgFlyoutService`, add flyouts container property :
 
 ```ts
-  @ViewChild("flyouts", { read: ViewContainerRef }) flyouts!: ViewContainerRef;
+@ViewChild("flyouts", { read: ViewContainerRef }) flyouts!: ViewContainerRef;
 ```
 
 and inside `AfterViewInit` pass container reference to service :
@@ -45,14 +45,9 @@ Flyout is created from code by injecting `NgFlyoutService` and calling `create(f
 `HeaderButton` class is used to instantiate buttons in upper right header area.
 
 ```ts
-export class AppComponent {
-  @ViewChild("flyouts", { read: ViewContainerRef }) flyouts!: ViewContainerRef;
+export class SomeComponent {
 
   constructor(public flyoutService: NgFlyoutService) { }
-
-  ngAfterViewInit(): void {
-    this.flyoutService.setFlyoutContainerRef(this.flyouts);
-  }
 
   openFlyout() {
     let flyout = new Flyout<FormComponent>();
