@@ -6,7 +6,10 @@ Extensible flyout component based on Angular (v16). Multiple flyouts can exists 
 Flyout consists of header and content area:
 
 * header : title and header buttons
-* content : render Angular component passed to flyout 
+* content : render Angular component passed to flyout
+
+npm : https://www.npmjs.com/package/ng-flyout
+install : npm i ng-flyout
 
 ## Setup
 
