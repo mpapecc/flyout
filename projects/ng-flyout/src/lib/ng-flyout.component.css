@@ -1,5 +1,4 @@
 .flyout {
-    /* display: flex; */
     position: fixed;
     width: 0;
     top: 0;
@@ -13,7 +12,6 @@
     }
 
     .backdrop {
-        flex: 1;
         background-color: gray;
         opacity: 0.8;
         cursor: pointer;
@@ -49,7 +47,6 @@
         .ng-content {
             height: 95%;
             overflow-y: auto;
-            /* padding-top: 8px; */
         }
     }
 
