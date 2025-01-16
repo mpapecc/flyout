@@ -1,6 +1,9 @@
 {
   "name": "ng-flyout",
   "version": "0.0.1",
+  "author": "mpapec",
+  "license": "MIT",
+  "homepage": "https://github.com/mpapecc/flyout",
   "peerDependencies": {
     "@angular/common": "^16.0.0",
     "@angular/core": "^16.0.0"
