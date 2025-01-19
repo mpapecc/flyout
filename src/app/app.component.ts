@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ViewChild, ViewContainerRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Flyout, HeaderButton, NgFlyoutService } from 'ng-flyout';
 import { FormComponent } from './form/form.component';
 
@@ -7,14 +7,12 @@ import { FormComponent } from './form/form.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements AfterViewInit{
+export class AppComponent implements OnInit{
   title = 'flyout';
-  @ViewChild("flyouts", { read: ViewContainerRef }) flyouts!: ViewContainerRef;
 
   constructor(public flyoutService: NgFlyoutService) { }
 
-  ngAfterViewInit(): void {
-    this.flyoutService.setFlyoutContainerRef(this.flyouts);
+  ngOnInit(): void {
     this.openFlyout();
   }
   
