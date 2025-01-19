@@ -6,35 +6,10 @@ Extensible flyout component based on Angular (v16). Multiple flyouts can exists 
 Flyout consists of header and content area:
 
 * header : title and header buttons
-* content : render Angular component passed to flyout 
+* content : render Angular component passed to flyout
 
-## Setup
-
-Import NgFlyoutModule into your app module and add it to your module imports array. Into root component html (e.g. app.component.html) add flyouts container template reference element :
-
-```html
-<div #flyouts></div>
-```
-
-Into root component class (app.component.ts) inject `NgFlyoutService`, add flyouts container property :
-
-```ts
-@ViewChild("flyouts", { read: ViewContainerRef }) flyouts!: ViewContainerRef;
-```
-
-and inside `AfterViewInit` pass container reference to service :
-
-```ts
-export class AppComponent implements AfterViewInit {
-  @ViewChild("flyouts", { read: ViewContainerRef }) flyouts!: ViewContainerRef;
-
-  constructor(public flyoutService: NgFlyoutService) { }
-
-  ngAfterViewInit(): void {
-    this.flyoutService.setFlyoutContainerRef(this.flyouts);
-  }
-}
-```
+npm : https://www.npmjs.com/package/ng-flyout
+install : npm i ng-flyout
 
 ## Usage
 
@@ -67,4 +42,3 @@ export class SomeComponent {
   }
 }
 ```
-
